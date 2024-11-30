@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Declaración de características y permisos -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".CameraCaptureActivity"
+            android:exported="false"
+            android:label="@string/title_activity_camera_capture"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <!-- Actividad principal -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.DayNight">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Otras actividades -->
+        <activity
+            android:name=".NuevoParteActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".IdentificadoActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".utils.ListaIdentificadosActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".FiliacionCompletaActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity android:name=".Captura.CameraCaptureActivity" android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+    </application>
+
+</manifest>

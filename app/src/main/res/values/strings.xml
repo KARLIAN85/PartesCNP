@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PartesCNP</string>
+    <string name="title_activity_camera_capture">CameraCaptureActivity</string>
+</resources>
